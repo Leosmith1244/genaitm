@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gen AI Speakers Toastmasters | Where AI Innovation Meets Confident Communication</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --blue: #004165; /* Toastmasters Loyal Blue */
+      --maroon: #772432; /* Toastmasters True Maroon */
+      --yellow: #F2DF74; /* Toastmasters Happy Yellow */
+      --gray: #A9B2B1; /* Toastmasters Cool Gray */
+      --black: #000000;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Source Sans 3', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--black);
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header Styles */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 3rem;
+      background: rgba(0, 65, 101, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 60px;
+      margin-right: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-weight: 600;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+      transform: translateY(-2px);
+    }
+
+    .nav-links a.active {
+      color: var(--yellow);
+      font-weight: 700;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: 
+        linear-gradient(to bottom, rgba(0, 65, 101, 0.85), rgba(119, 36, 50, 0.85)),
+        url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      text-align: center;
+      padding: 180px 20px 100px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, var(--yellow), var(--blue), var(--maroon));
+    }
+
+    .page-title {
+      font-weight: 900;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .page-subtitle {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Button Styles */
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--yellow);
+      color: var(--black);
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      margin: 10px 5px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(242,223,116,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--yellow);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      background: var(--yellow);
+      color: var(--black);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Highlights Grid */
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+
+    .highlight-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-top: 5px solid var(--yellow);
+      transition: all 0.3s;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: var(--maroon);
+      margin-bottom: 20px;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background: var(--white);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .member-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background-color: var(--gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--blue);
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    cite {
+      display: block;
+      font-style: normal;
+      font-weight: bold;
+      color: var(--maroon);
+    }
+
+    .rating {
+      color: var(--yellow);
+      margin-top: 15px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--blue);
+      color: var(--white);
+      padding: 50px 20px 20px;
+      text-align: center;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .footer-logo {
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      background: var(--yellow);
+      color: var(--black);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header {
+        padding: 1rem;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-links li {
+        margin: 0 0.5rem;
+      }
+      .page-title {
+        font-size: 2.2rem;
+      }
+      .hero {
+        padding: 150px 20px 80px;
+      }
+    }
+
+    /* AI Circuit Pattern Background */
+    .ai-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(242, 223, 116, 0.05) 0%, transparent 20%),
+        linear-gradient(45deg, transparent 48%, rgba(242, 223, 116, 0.05) 48%, rgba(242, 223, 116, 0.05) 52%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(242, 223, 116, 0.05) 48%, rgba(242, 223, 116, 0.05) 52%, transparent 52%);
+      background-size: 100px 100px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <!-- AI Circuit Pattern Background -->
+  <div class="ai-pattern"></div>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="https://www.toastmasters.org/resources/brand-portal/~/media/5F5F5F8C4E5D4D1D8E2F4B5F5F5F5F5F.ashx" alt="Toastmasters International" class="logo">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-robot"></i> About</a></li>
+          <li><a href="meetings.html"><i class="fas fa-calendar-alt"></i> Meetings</a></li>
+          <li><a href="join.html"><i class="fas fa-user-plus"></i> Join</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="page-title">Gen AI Speakers Toastmasters</h1>
+    <p class="page-subtitle">Where AI innovation meets confident communication</p>
+    <div>
+      <a href="meetings.html" class="btn"><i class="fas fa-video"></i> Join Our Next Meeting</a>
+      <a href="join.html" class="btn btn-outline"><i class="fas fa-users"></i> Meet the Members</a>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <div class="container">
+    <h2 style="text-align: center; margin-top: 50px;">Club Highlights</h2>
+    <div class="highlights">
+      <!-- Highlight 1 -->
+      <div class="highlight-card">
+        <div class="highlight-icon"><i class="fas fa-calendar-check"></i></div>
+        <h3>Next Meeting</h3>
+        <p><strong>Theme:</strong> "Prompt Engineering Your Speech"</p>
+        <p><strong>Date:</strong> July 5, 2025</p>
+        <p><strong>Time:</strong> 12:00 PM Central</p>
+        <a href="meetings.html" class="btn" style="display: inline-block; margin-top: 15px; padding: 8px 20px;">Details</a>
+      </div>
+      
+      <!-- Highlight 2 -->
+      <div class="highlight-card">
+        <div class="highlight-icon"><i class="fas fa-trophy"></i></div>
+        <h3>Member Spotlight</h3>
+        <p><strong>AI Researcher of the Month</strong></p>
+        <p>Dr. Sarah Chen for her groundbreaking presentation on "Ethical AI Communication"</p>
+        <a href="join.html" class="btn" style="display: inline-block; margin-top: 15px; padding: 8px 20px;">View Profile</a>
+      </div>
+      
+      <!-- Highlight 3 -->
+      <div class="highlight-card">
+        <div class="highlight-icon"><i class="fas fa-award"></i></div>
+        <h3>Club Achievement</h3>
+        <p><strong>Chartered June 30, 2025</strong></p>
+        <p>Officially recognized as Toastmasters Club #28679006 in District 106, Area B11</p>
+        <a href="about.html" class="btn" style="display: inline-block; margin-top: 15px; padding: 8px 20px;">Our Story</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Section -->
+  <div class="container">
+    <h2 style="text-align: center; margin-top: 50px;">What Our Members Say</h2>
+    <div class="testimonial">
+      <div class="member-photo"><i class="fas fa-user-astronaut"></i></div>
+      <blockquote>
+        "Gen AI Speakers has transformed how I communicate complex technical concepts. The AI-themed meeting roles make practice both relevant and engaging for my work as a machine learning engineer."
+      </blockquote>
+      <cite>— Dr. Alex Rivera, Senior AI Researcher</cite>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section style="background: var(--blue); color: var(--white); padding: 80px 20px; text-align: center; margin-top: 50px;">
+    <div class="container">
+      <h2>Ready to Elevate Your AI Communication Skills?</h2>
+      <p style="max-width: 700px; margin: 20px auto;">Join our community of AI professionals developing the essential soft skills to complement their technical expertise.</p>
+      <a href="join.html" class="btn"><i class="fas fa-user-plus"></i> Become a Member</a>
+      <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="https://www.toastmasters.org/resources/brand-portal/~/media/5F5F5F8C4E5D4D1D8E2F4B5F5F5F5F5F.ashx" alt="Toastmasters International" class="footer-logo">
+          <p>Gen AI Speakers Toastmasters</p>
+          <p>Club #28679006 | District 106, Area B11</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3>Quick Links</h3>
+          <ul style="list-style: none; margin-top: 15px;">
+            <li style="margin-bottom: 10px;"><a href="about.html">About Our Club</a></li>
+            <li style="margin-bottom: 10px;"><a href="meetings.html">Meeting Schedule</a></li>
+            <li style="margin-bottom: 10px;"><a href="join.html">Membership</a></li>
+            <li style="margin-bottom: 10px;"><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3>Meeting Info</h3>
+          <p style="margin-top: 15px;">Every Friday at 12 PM Central</p>
+          <p>Virtual via Zoom</p>
+          <p>Phone: +1 319-431-2415</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Gen AI Speakers Toastmasters. All rights reserved.</p>
+        <p>A proud member of <a href="https://www.toastmasters.org" style="color: var(--yellow);">Toastmasters International</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
