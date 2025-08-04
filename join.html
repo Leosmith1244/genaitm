@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Join Gen AI Speakers Toastmasters | Meet Our Charter Members</title>
+    <title>Join Gen AI Speakers Toastmasters | Meet Our Members</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -23,9 +23,9 @@
             margin: 0;
         }
 
-        /* Reuse header/footer styles */
-        .header, .footer {
-            /* Same as index.html */
+        /* Header styles same as before */
+        .header, .navbar, .logo-container, .logo, .nav-links {
+            /* Same as previous pages */
         }
 
         /* Join-specific styles */
@@ -110,26 +110,40 @@
             margin: 20px 0;
         }
 
-        .tech-specialty {
-            display: inline-block;
+        .designation-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tm-designation {
             background-color: var(--blue);
             color: var(--white);
-            padding: 5px 10px;
+            padding: 4px 10px;
             border-radius: 4px;
-            font-size: 0.8rem;
-            margin: 5px;
+            font-size: 0.7rem;
+            font-weight: bold;
         }
 
-        .ml {
+        .ai-designation {
             background-color: var(--maroon);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
         }
 
-        .nlp {
-            background-color: #8E44AD;
-        }
-
-        .ethics {
-            background-color: #27AE60;
+        .role-badge {
+            background-color: var(--yellow);
+            color: var(--black);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
         }
 
         .join-cta {
@@ -178,8 +192,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Meet Our Charter Members</h1>
-        <p>The AI professionals who launched this innovative club</p>
+        <h1>Meet Our Members</h1>
+        <p>The brilliant minds behind Gen AI Speakers Toastmasters</p>
     </section>
 
     <!-- Member Grid -->
@@ -187,97 +201,408 @@
         <!-- Member 1 -->
         <div class="member-card">
             <div class="member-header">
-                <span class="member-badge">President</span>
-                <h3 class="member-name">Dr. Sarah Chen</h3>
-                <p class="member-title">AI Researcher | Communication Architect</p>
+                <h3 class="member-name">Monica Prom</h3>
+                <p class="member-title">Communication Strategist</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DL2</span>
+                    <span class="ai-designation">Neural Network Narrator</span>
+                </div>
             </div>
             <div class="member-bio">
-                <p>Sarah's presentations on AI ethics are as precise as her algorithms. She leads with clarity and vision.</p>
-                <div class="member-quote">"Public speaking is the most important algorithm we need to optimize."</div>
-                <span class="tech-specialty ethics">AI Ethics</span>
-                <span class="tech-specialty">Technical Communication</span>
+                <p>Specializes in making complex AI concepts accessible through compelling storytelling techniques.</p>
+                <div class="member-quote">"Every algorithm has a story worth telling."</div>
             </div>
         </div>
 
         <!-- Member 2 -->
         <div class="member-card">
             <div class="member-header">
-                <span class="member-badge">VP Education</span>
-                <h3 class="member-name">Alex Rivera</h3>
-                <p class="member-title">ML Engineer | Speech Debugger</p>
+                <h3 class="member-name">Edward Chavan</h3>
+                <p class="member-title">Tech Translator</p>
+                <div class="designation-container">
+                    <span class="tm-designation">CC</span>
+                    <span class="ai-designation">API Whisperer</span>
+                </div>
             </div>
             <div class="member-bio">
-                <p>Alex structures learning paths like neural networks. His educational approach is systematic yet adaptable.</p>
-                <div class="member-quote">"Every speech is a model that can be improved through iteration."</div>
-                <span class="tech-specialty ml">Machine Learning</span>
-                <span class="tech-specialty">Model Optimization</span>
+                <p>Bridges the gap between technical teams and business stakeholders with clear communication.</p>
+                <div class="member-quote">"Precision in language leads to clarity in understanding."</div>
             </div>
         </div>
 
         <!-- Member 3 -->
         <div class="member-card">
             <div class="member-header">
-                <span class="member-badge">Treasurer</span>
-                <h3 class="member-name">Jamal Williams</h3>
-                <p class="member-title">Data Scientist | Financial Modeler</p>
+                <h3 class="member-name">Neel Kumtakar</h3>
+                <p class="member-title">Emerging AI Leader</p>
+                <div class="designation-container">
+                    <span class="ai-designation">Quantum Computing Explorer</span>
+                </div>
             </div>
             <div class="member-bio">
-                <p>Jamal's financial reports are as clean as his data visualizations. He brings analytical rigor to our operations.</p>
-                <div class="member-quote">"Budgeting a club is like tuning hyperparameters - precision matters."</div>
-                <span class="tech-specialty">Data Visualization</span>
-                <span class="tech-specialty">Statistical Analysis</span>
+                <p>Passionate about the ethical implications of next-generation computing technologies.</p>
+                <div class="member-quote">"The future of AI is being written today."</div>
             </div>
         </div>
 
         <!-- Member 4 -->
         <div class="member-card">
             <div class="member-header">
-                <span class="member-badge">Secretary</span>
-                <h3 class="member-name">Priya Patel</h3>
-                <p class="member-title">NLP Specialist | Documentation Expert</p>
+                <span class="member-badge">Club VP PR</span>
+                <h3 class="member-name">Pacita Florida</h3>
+                <p class="member-title">Brand Architect</p>
+                <div class="designation-container">
+                    <span class="tm-designation">PM5</span>
+                    <span class="ai-designation">Brand Algorithm Specialist</span>
+                </div>
             </div>
             <div class="member-bio">
-                <p>Priya's minutes are as accurate as her language models. She captures the essence of every meeting.</p>
-                <div class="member-quote">"Good documentation, like good code, should be clear and concise."</div>
-                <span class="tech-specialty nlp">Natural Language</span>
-                <span class="tech-specialty">Knowledge Management</span>
+                <p>Crafts compelling narratives about our club's mission and AI communication initiatives.</p>
+                <div class="member-quote">"Every brand has a unique algorithm for connection."</div>
             </div>
         </div>
 
         <!-- Member 5 -->
         <div class="member-card">
             <div class="member-header">
-                <span class="member-badge">Sergeant at Arms</span>
-                <h3 class="member-name">David Kim</h3>
-                <p class="member-title">Systems Architect | Meeting Orchestrator</p>
+                <h3 class="member-name">Paul Haverberg</h3>
+                <p class="member-title">Systems Communicator</p>
+                <div class="designation-container">
+                    <span class="ai-designation">Cloud Orchestration Storyteller</span>
+                </div>
             </div>
             <div class="member-bio">
-                <p>David keeps our virtual meetings running as smoothly as distributed systems. His timing is impeccable.</p>
-                <div class="member-quote">"A well-run meeting follows the same principles as good system design."</div>
-                <span class="tech-specialty">Cloud Infrastructure</span>
-                <span class="tech-specialty">Scalability</span>
+                <p>Transforms complex system architectures into understandable frameworks.</p>
+                <div class="member-quote">"Clarity emerges from well-structured communication."</div>
             </div>
         </div>
 
         <!-- Member 6 -->
         <div class="member-card">
             <div class="member-header">
-                <span class="member-badge">PR Chair</span>
-                <h3 class="member-name">Maria Gonzalez</h3>
-                <p class="member-title">AI Ethicist | Storyteller</p>
+                <span class="member-badge">Club VP Membership</span>
+                <h3 class="member-name">Tahiti Castillo</h3>
+                <p class="member-title">Community Architect</p>
+                <div class="designation-container">
+                    <span class="tm-designation">VC2</span>
+                    <span class="ai-designation">Neural Community Builder</span>
+                </div>
             </div>
             <div class="member-bio">
-                <p>Maria communicates complex ethical concepts with clarity. She shapes our public image with care.</p>
-                <div class="member-quote">"Ethical AI requires both technical skill and compelling communication."</div>
-                <span class="tech-specialty ethics">AI Ethics</span>
-                <span class="tech-specialty">Public Engagement</span>
+                <p>Creates meaningful connections between members with diverse technical backgrounds.</p>
+                <div class="member-quote">"Strong networks require intentional design."</div>
+            </div>
+        </div>
+
+        <!-- Member 7 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Hassan Barzani</h3>
+                <p class="member-title">Data Storyteller</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DL5</span>
+                    <span class="ai-designation">Data Pipeline Poet</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Transforms raw data into compelling narratives that drive decision-making.</p>
+                <div class="member-quote">"Numbers tell stories, we just need to listen."</div>
+            </div>
+        </div>
+
+        <!-- Member 8 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Siva Konjerla</h3>
+                <p class="member-title">AI Ethicist</p>
+                <div class="designation-container">
+                    <span class="ai-designation">Ethical AI Advocate</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Champions responsible AI development through clear communication frameworks.</p>
+                <div class="member-quote">"Ethics must be encoded in our words as well as our algorithms."</div>
+            </div>
+        </div>
+
+        <!-- Member 9 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Ian Walmark</h3>
+                <p class="member-title">Tech Educator</p>
+                <div class="designation-container">
+                    <span class="tm-designation">LD1</span>
+                    <span class="ai-designation">Machine Learning Mentor</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Breaks down complex machine learning concepts into digestible learning modules.</p>
+                <div class="member-quote">"Understanding precedes innovation."</div>
+            </div>
+        </div>
+
+        <!-- Member 10 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Amelia Vazquez</h3>
+                <p class="member-title">Technical Translator</p>
+                <div class="designation-container">
+                    <span class="tm-designation">PM4</span>
+                    <span class="ai-designation">API Linguist</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Specializes in making technical documentation accessible to diverse audiences.</p>
+                <div class="member-quote">"Good documentation is the API to understanding."</div>
+            </div>
+        </div>
+
+        <!-- Member 11 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Allan Davidson</h3>
+                <p class="member-title">Systems Communicator</p>
+                <div class="designation-container">
+                    <span class="tm-designation">PM1</span>
+                    <span class="ai-designation">Cloud Narrative Engineer</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Articulates complex cloud architectures with clarity and precision.</p>
+                <div class="member-quote">"The cloud is just someone else's computer - let me explain."</div>
+            </div>
+        </div>
+
+        <!-- Member 12 -->
+        <div class="member-card">
+            <div class="member-header">
+                <span class="member-badge">Club President</span>
+                <h3 class="member-name">Ashok Sunkavalli</h3>
+                <p class="member-title">AI Visionary</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DTM</span>
+                    <span class="ai-designation">Chief AI Storyteller</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Leads our club with a vision for ethical AI communication standards.</p>
+                <div class="member-quote">"Great leaders communicate as intentionally as they code."</div>
+            </div>
+        </div>
+
+        <!-- Member 13 -->
+        <div class="member-card">
+            <div class="member-header">
+                <span class="member-badge">Club Secretary</span>
+                <h3 class="member-name">Kent Hawks</h3>
+                <p class="member-title">Precision Specialist</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DTM</span>
+                    <span class="ai-designation">Data Pattern Recognizer</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Ensures our club's operations run with algorithmic efficiency.</p>
+                <div class="member-quote">"Accuracy in communication prevents bugs in understanding."</div>
+            </div>
+        </div>
+
+        <!-- Member 14 -->
+        <div class="member-card">
+            <div class="member-header">
+                <span class="member-badge">Club VP Education</span>
+                <h3 class="member-name">Matthew Villella</h3>
+                <p class="member-title">Learning Architect</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DTM</span>
+                    <span class="ai-designation">Neural Learning Designer</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Designs educational pathways for technical communication mastery.</p>
+                <div class="member-quote">"Learning is just debugging our understanding."</div>
+            </div>
+        </div>
+
+        <!-- Member 15 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Nagadhatri Chennavajula</h3>
+                <p class="member-title">AI Ethicist</p>
+                <div class="designation-container">
+                    <span class="ai-designation">Bias Detection Specialist</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Focuses on identifying and articulating ethical considerations in AI systems.</p>
+                <div class="member-quote">"Ethical AI begins with clear communication about values."</div>
+            </div>
+        </div>
+
+        <!-- Member 16 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Bhaskar Tripathy</h3>
+                <p class="member-title">Data Storyteller</p>
+                <div class="designation-container">
+                    <span class="tm-designation">VC5</span>
+                    <span class="ai-designation">Data Visualization Architect</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Transforms complex datasets into compelling visual narratives.</p>
+                <div class="member-quote">"A good chart is worth a thousand data points."</div>
+            </div>
+        </div>
+
+        <!-- Member 17 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Rahul Kashyap</h3>
+                <p class="member-title">Tech Evangelist</p>
+                <div class="designation-container">
+                    <span class="tm-designation">PM5</span>
+                    <span class="ai-designation">Blockchain Bard</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Makes emerging technologies accessible through engaging presentations.</p>
+                <div class="member-quote">"The blockchain is just a story waiting to be told."</div>
+            </div>
+        </div>
+
+        <!-- Member 18 -->
+        <div class="member-card">
+            <div class="member-header">
+                <span class="member-badge">Club Sergeant at Arms</span>
+                <h3 class="member-name">Sunny Fridge</h3>
+                <p class="member-title">Systems Guardian</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DTM</span>
+                    <span class="ai-designation">Security Protocol Specialist</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Ensures our virtual meetings run smoothly and securely.</p>
+                <div class="member-quote">"Good protocols prevent communication vulnerabilities."</div>
+            </div>
+        </div>
+
+        <!-- Member 19 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Shaam Rao</h3>
+                <p class="member-title">Emerging Technologist</p>
+                <div class="designation-container">
+                    <span class="ai-designation">Quantum Narrative Engineer</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Exploring the communication challenges of next-generation computing.</p>
+                <div class="member-quote">"The future is uncertain, but our words can make it clearer."</div>
+            </div>
+        </div>
+
+        <!-- Member 20 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Nadav Cassuto</h3>
+                <p class="member-title">AI Communicator</p>
+                <div class="designation-container">
+                    <span class="ai-designation">Multilingual Model Trainer</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Specializes in cross-cultural communication about AI systems.</p>
+                <div class="member-quote">"Language is the original neural network."</div>
+            </div>
+        </div>
+
+        <!-- Member 21 -->
+        <div class="member-card">
+            <div class="member-header">
+                <span class="member-badge">Club Treasurer</span>
+                <h3 class="member-name">Anna Gaichas</h3>
+                <p class="member-title">Financial Architect</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DTM</span>
+                    <span class="ai-designation">Algorithmic Accountant</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Manages club finances with the precision of a well-tuned algorithm.</p>
+                <div class="member-quote">"Every dollar should return value like a good function."</div>
+            </div>
+        </div>
+
+        <!-- Member 22 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Gopu Shrestha</h3>
+                <p class="member-title">Tech Diplomat</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DTM</span>
+                    <span class="ai-designation">International Protocol Specialist</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Facilitates cross-border communication about technology standards.</p>
+                <div class="member-quote">"Global understanding requires careful protocol design."</div>
+            </div>
+        </div>
+
+        <!-- Member 23 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Burak Malkoc</h3>
+                <p class="member-title">Systems Storyteller</p>
+                <div class="designation-container">
+                    <span class="tm-designation">PM2</span>
+                    <span class="ai-designation">Distributed Systems Bard</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Makes complex distributed systems understandable through narrative.</p>
+                <div class="member-quote">"Every system has a story - we just need to decode it."</div>
+            </div>
+        </div>
+
+        <!-- Member 24 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Randy Casper</h3>
+                <p class="member-title">Tech Translator</p>
+                <div class="designation-container">
+                    <span class="tm-designation">PI3</span>
+                    <span class="ai-designation">Legacy System Linguist</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Bridges the gap between legacy systems and modern technical audiences.</p>
+                <div class="member-quote">"Old systems contain wisdom worth preserving."</div>
+            </div>
+        </div>
+
+        <!-- Member 25 -->
+        <div class="member-card">
+            <div class="member-header">
+                <h3 class="member-name">Denise Sundquist</h3>
+                <p class="member-title">Communication Architect</p>
+                <div class="designation-container">
+                    <span class="tm-designation">DTM</span>
+                    <span class="ai-designation">Enterprise Narrative Designer</span>
+                </div>
+            </div>
+            <div class="member-bio">
+                <p>Designs communication frameworks for large-scale technical organizations.</p>
+                <div class="member-quote">"At scale, communication becomes infrastructure."</div>
             </div>
         </div>
     </div>
     
     <!-- Join CTA -->
     <section class="join-cta">
-        <h2>Ready to Join Our AI Communication Network?</h2>
+        <h2>Ready to Join Our AI Communication Community?</h2>
         <p>Whether you're an AI professional, researcher, or tech enthusiast, we welcome you to develop your skills with us.</p>
         <a href="contact.html" class="btn-join">Contact Us to Join</a>
     </section>
