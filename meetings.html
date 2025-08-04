@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meetings | Gen AI Speakers Toastmasters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --blue: #004165;
+            --maroon: #772432;
+            --yellow: #F2DF74;
+            --gray: #A9B2B1;
+            --black: #000000;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Source Sans 3', Arial, sans-serif;
+            line-height: 1.6;
+            padding-top: 80px;
+            background: var(--white);
+            color: var(--black);
+            margin: 0;
+        }
+
+        /* Reuse header/footer styles */
+        .header, .footer {
+            /* Same as index.html */
+        }
+
+        /* Meetings-specific styles */
+        .meetings-hero {
+            background: 
+                linear-gradient(to bottom, rgba(0, 65, 101, 0.85), rgba(119, 36, 50, 0.85)),
+                url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .meeting-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .virtual-banner {
+            background: linear-gradient(to right, var(--yellow), var(--blue));
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .meeting-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .meeting-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 5px solid var(--yellow);
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(242,223,116,0.3);
+        }
+
+        .meeting-header {
+            background: var(--blue);
+            color: var(--white);
+            padding: 20px;
+            position: relative;
+        }
+
+        .meeting-type {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: var(--yellow);
+            color: var(--black);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .meeting-body {
+            padding: 20px;
+        }
+
+        .meeting-detail {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .detail-icon {
+            color: var(--maroon);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            min-width: 25px;
+        }
+
+        .btn-zoom {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background: var(--blue);
+            color: var(--white);
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 15px;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-zoom:hover {
+            background: var(--maroon);
+            transform: translateY(-3px);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .schedule-table th {
+            background: var(--blue);
+            color: var(--white);
+            padding: 15px;
+            text-align: left;
+        }
+
+        .schedule-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background: var(--gray);
+        }
+
+        .schedule-table tr:hover {
+            background: rgba(242,223,116,0.2);
+        }
+
+        .zoom-instructions {
+            background: var(--gray);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="https://www.toastmasters.org/resources/brand-portal/~/media/5F5F5F8C4E5D4D1D8E2F4B5F5F5F5F5F.ashx" alt="Toastmasters International" class="logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-robot"></i> About</a></li>
+                    <li><a href="meetings.html" class="active"><i class="fas fa-calendar-alt"></i> Meetings</a></li>
+                    <li><a href="join.html"><i class="fas fa-user-plus"></i> Join</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="meetings-hero">
+        <h1>Gen AI Speakers Meetings</h1>
+        <p>Where technical expertise meets confident communication</p>
+    </section>
+
+    <div class="meeting-container">
+        <!-- Virtual Banner -->
+        <div class="virtual-banner">
+            <i class="fas fa-laptop fa-2x"></i>
+            <div>
+                <h2 style="margin: 0;">Virtual Meetings</h2>
+                <p style="margin: 5px 0 0;">Join us weekly via Zoom!</p>
+            </div>
+        </div>
+
+        <!-- UPCOMING MEETINGS -->
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Meetings</h2>
+        <div class="meeting-cards">
+            <!-- Formal Meeting Card -->
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <h3>Weekly Club Meeting</h3>
+                    <span class="meeting-type">Formal</span>
+                </div>
+                <div class="meeting-body">
+                    <div class="meeting-detail">
+                        <div class="detail-icon"><i class="fas fa-calendar-day"></i></div>
+                        <div>
+                            <strong>Date:</strong> July 5, 2025<br>
+                            <strong>Time:</strong> 12:00-1:00 PM CST
+                        </div>
+                    </div>
+                    <div class="meeting-detail">
+                        <div class="detail-icon"><i class="fas fa-laptop"></i></div>
+                        <div>
+                            <strong>Format:</strong> Virtual via Zoom<br>
+                            <strong>Theme:</strong> "The Ethics of AI Storytelling"
+                        </div>
+                    </div>
+                    <a href="https://zoom.us/j/1234567890" class="btn-zoom" target="_blank">
+                        <i class="fas fa-video"></i> Join via Zoom
+                    </a>
+                </div>
+            </div>
+
+            <!-- Workshop Card -->
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <h3>Monthly Workshop</h3>
+                    <span class="meeting-type">Interactive</span>
+                </div>
+                <div class="meeting-body">
+                    <div class="meeting-detail">
+                        <div class="detail-icon"><i class="fas fa-calendar-day"></i></div>
+                        <div>
+                            <strong>Date:</strong> July 12, 2025<br>
+                            <strong>Time:</strong> 12:00-1:30 PM CST
+                        </div>
+                    </div>
+                    <div class="meeting-detail">
+                        <div class="detail-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div>
+                            <strong>Topic:</strong> "Technical Presentation Skills"<br>
+                            <strong>Presenter:</strong> Dr. Sarah Chen
+                        </div>
+                    </div>
+                    <div class="meeting-detail">
+                        <div class="detail-icon"><i class="fas fa-laptop"></i></div>
+                        <div>
+                            <strong>Format:</strong> Virtual via Zoom
+                        </div>
+                    </div>
+                    <a href="https://zoom.us/j/1234567890" class="btn-zoom" target="_blank">
+                        <i class="fas fa-video"></i> Join via Zoom
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEETING SCHEDULE -->
+        <h2><i class="fas fa-calendar-alt"></i> 2025 Meeting Schedule</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Time</th>
+                    <th>Theme</th>
+                    <th>Special Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>July 5</td>
+                    <td>Formal Meeting</td>
+                    <td>12:00-1:00 PM</td>
+                    <td>The Ethics of AI Storytelling</td>
+                    <td>Open to guests</td>
+                </tr>
+                <tr>
+                    <td>July 12</td>
+                    <td>Workshop</td>
+                    <td>12:00-1:30 PM</td>
+                    <td>Technical Presentation Skills</td>
+                    <td>Extended time</td>
+                </tr>
+                <tr>
+                    <td>July 19</td>
+                    <td>Formal Meeting</td>
+                    <td>12:00-1:00 PM</td>
+                    <td>Prompt Engineering Your Speech</td>
+                    <td>Speech contest prep</td>
+                </tr>
+                <tr>
+                    <td>July 26</td>
+                    <td>Evaluation Practice</td>
+                    <td>12:00-1:00 PM</td>
+                    <td>Constructive Feedback Techniques</td>
+                    <td>Mentor-led</td>
+                </tr>
+                <tr>
+                    <td>August 2</td>
+                    <td>Formal Meeting</td>
+                    <td>12:00-1:00 PM</td>
+                    <td>Visualizing Data in Speeches</td>
+                    <td>Open to guests</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ZOOM INSTRUCTIONS -->
+        <div class="zoom-instructions">
+            <h2><i class="fas fa-video"></i> Virtual Meeting Instructions</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div>
+                    <h3>Zoom Details</h3>
+                    <p><strong>Meeting ID:</strong> 123 456 7890</p>
+                    <p><strong>Passcode:</strong> AI106</p>
+                    <p><strong>Link:</strong> <a href="https://zoom.us/j/1234567890">https://zoom.us/j/1234567890</a></p>
+                    <p><strong>Dial-in:</strong> +1 319-431-2415</p>
+                </div>
+                <div>
+                    <h3>Tips for Attendees</h3>
+                    <ul style="margin-top: 0;">
+                        <li>Join 5 minutes early for tech check</li>
+                        <li>Use a headset for best audio quality</li>
+                        <li>Mute when not speaking</li>
+                        <li>Enable video if comfortable</li>
+                        <li>Dress: Business casual</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="https://www.toastmasters.org/resources/brand-portal/~/media/5F5F5F8C4E5D4D1D8E2F4B5F5F5F5F5F.ashx" alt="Toastmasters International" class="footer-logo">
+                    <p>Gen AI Speakers Toastmasters</p>
+                    <p>Club #28679006 | District 106, Area B11</p>
+                </div>
+                
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none; margin-top: 15px;">
+                        <li style="margin-bottom: 10px;"><a href="index.html">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="about.html">About</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Meeting Info</h3>
+                    <p style="margin-top: 15px;">Every Friday at 12 PM Central</p>
+                    <p>Virtual via Zoom</p>
+                    <p>Phone: +1 319-431-2415</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gen AI Speakers Toastmasters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
